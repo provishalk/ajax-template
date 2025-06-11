@@ -1,0 +1,21 @@
+body {
+  font-family: sans-serif;
+  padding: 2rem;
+  background: #f4f4f4;
+}
+input, select, textarea, button {
+  display: block;
+  margin: 0.5rem 0 1rem;
+  padding: 0.5rem;
+  width: 100%;
+  max-width: 400px;
+}
+nav a {
+  margin-right: 1rem;
+  text-decoration: none;
+}
+form {
+  background: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}

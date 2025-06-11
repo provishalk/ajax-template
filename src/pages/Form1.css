@@ -1,0 +1,102 @@
+.form1-container {
+  background-color: #fffbea;
+  padding: 2rem 3rem;
+  max-width: 700px;
+  margin: 2rem auto;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  font-family: "Segoe UI", sans-serif;
+}
+
+.breakfast-form {
+  gap: 1rem;
+}
+
+.breakfast-form fieldset {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  flex-direction: column;
+}
+
+.breakfast-form fieldset label {
+  display: flex !important;
+  justify-content: start !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+}
+
+.breakfast-form fieldset input {
+  margin: 2px ;
+  width: auto !important;
+}
+
+h2 {
+  text-align: center;
+  color: #da7b00;
+  margin-bottom: 1.5rem;
+}
+
+.breakfast-form label,
+.breakfast-form legend {
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+}
+
+.breakfast-form input,
+.breakfast-form select,
+.breakfast-form textarea {
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.breakfast-form input[type="range"] {
+  padding: 0;
+}
+
+.spice-level {
+  font-style: italic;
+  color: #d35400;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+}
+
+.breakfast-form fieldset {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.breakfast-form fieldset label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.breakfast-form textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.breakfast-form button {
+  background-color: #ff9500;
+  color: white;
+  font-weight: bold;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.breakfast-form button:hover {
+  background-color: #e67e22;
+}
