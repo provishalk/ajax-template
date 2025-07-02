@@ -1,65 +1,69 @@
-import { useState } from 'react'
-import './Home.css'
+import { useState } from "react";
+import "./Home.css";
 
 function Home() {
-  const [submitted, setSubmitted] = useState(false)
+  const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    personality: '',
-    fruit: '',
-    breakfastTime: '',
-    mood: '',
-    fightChoice: '',
-    mailmodoThoughts: '',
-    emailExperience: '',
+    fullName: "",
+    email: "",
+    phone: "",
+    personality: "",
+    fruit: "",
+    breakfastTime: "",
+    mood: "",
+    fightChoice: "",
+    mailmodoThoughts: "",
+    emailExperience: "",
     hobbies: [],
-  })
+  });
 
   const handleChange = (e) => {
-    const { name, value, type, checked } = e.target
-    if (type === 'checkbox') {
+    const { name, value, type, checked } = e.target;
+    if (type === "checkbox") {
       setFormData((prev) => ({
         ...prev,
         hobbies: checked
           ? [...prev.hobbies, value]
           : prev.hobbies.filter((hobby) => hobby !== value),
-      }))
+      }));
     } else {
-      setFormData({ ...formData, [name]: value })
+      setFormData({ ...formData, [name]: value });
     }
-  }
+  };
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    setSubmitted(true)
-  }
+    e.preventDefault();
+    setSubmitted(true);
+  };
 
   const handleResubmit = () => {
     setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      personality: '',
-      fruit: '',
-      breakfastTime: '',
-      mood: '',
-      fightChoice: '',
-      mailmodoThoughts: '',
-      emailExperience: '',
+      fullName: "",
+      email: "",
+      phone: "",
+      personality: "",
+      fruit: "",
+      breakfastTime: "",
+      mood: "",
+      fightChoice: "",
+      mailmodoThoughts: "",
+      emailExperience: "",
       hobbies: [],
-    })
-    setSubmitted(false)
-  }
+    });
+    setSubmitted(false);
+  };
 
   return (
     <div className="home-container">
       <h2>🎉 Let’s break the ice a little...</h2>
       {!submitted ? (
-        <form onSubmit={handleSubmit} className="fun-form">
+        <form
+          onSubmit={handleSubmit}
+          className="fun-form"
+          name="mailmodo-ice-breaker-form"
+        >
           <input
-            name="name"
+            name="fullName"
             placeholder="👤 Your full name?"
             onChange={handleChange}
             required
@@ -94,11 +98,7 @@ function Home() {
           />
 
           <label>⏰ What’s your dream breakfast time?</label>
-          <input
-            type="time"
-            name="breakfastTime"
-            onChange={handleChange}
-          />
+          <input type="time" name="breakfastTime" onChange={handleChange} />
 
           <label>🌦️ Mood check!</label>
           <select name="mood" onChange={handleChange}>
@@ -133,7 +133,7 @@ function Home() {
 
           <label>🎨 Pick your hobbies:</label>
           <div className="checkbox-group">
-            {['Gaming', 'Cooking', 'Reading', 'Coding', 'Meme-making'].map(
+            {["Gaming", "Cooking", "Reading", "Coding", "Meme-making"].map(
               (hobby) => (
                 <label key={hobby}>
                   <input
@@ -153,19 +153,29 @@ function Home() {
         </form>
       ) : (
         <div className="thank-you-card">
-          <h3>Thanks for the laughs, {formData.name}! 🤗</h3>
-          <p>Your responses have been stored in our ultra-secure 🤖 AI vault.</p>
+          <h3>Thanks for the laughs, {formData.fullName}! 🤗</h3>
+          <p>
+            Your responses have been stored in our ultra-secure 🤖 AI vault.
+          </p>
           <ul>
-            <li>Fruit spirit: <strong>{formData.fruit}</strong></li>
-            <li>Battle plan: <strong>{formData.fightChoice}</strong></li>
-            <li>Mailmodo feedback: <em>“{formData.mailmodoThoughts}”</em></li>
-            <li>Hobbies: <strong>{formData.hobbies.join(', ')}</strong></li>
+            <li>
+              Fruit spirit: <strong>{formData.fruit}</strong>
+            </li>
+            <li>
+              Battle plan: <strong>{formData.fightChoice}</strong>
+            </li>
+            <li>
+              Mailmodo feedback: <em>“{formData.mailmodoThoughts}”</em>
+            </li>
+            <li>
+              Hobbies: <strong>{formData.hobbies.join(", ")}</strong>
+            </li>
           </ul>
           <button onClick={handleResubmit}>🔄 Wanna go again?</button>
         </div>
       )}
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;
