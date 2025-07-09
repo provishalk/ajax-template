@@ -1,0 +1,409 @@
+/* Main container styling */
+.custom-pages-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.custom-pages-container h2 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.custom-pages-container p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* Editor section layout */
+.editor-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.input-section,
+.preview-section {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-section h3,
+.preview-section h3 {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+/* HTML Input textarea */
+.html-input {
+  width: 100%;
+  height: 400px;
+  padding: 15px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  resize: vertical;
+  background: #fff;
+  color: #333;
+}
+
+.html-input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+/* Preview container */
+.preview-container {
+  background: #fff;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  min-height: 400px;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.html-preview {
+  width: 100%;
+  min-height: 360px;
+}
+
+/* Comprehensive HTML Form Element Styling */
+
+/* Form container */
+.html-preview form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Labels */
+.html-preview label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+  text-align: left;
+}
+
+/* Text inputs */
+.html-preview input[type="text"],
+.html-preview input[type="email"],
+.html-preview input[type="password"],
+.html-preview input[type="tel"],
+.html-preview input[type="url"],
+.html-preview input[type="search"],
+.html-preview input[type="number"],
+.html-preview input[type="date"],
+.html-preview input[type="time"],
+.html-preview input[type="datetime-local"],
+.html-preview input[type="month"],
+.html-preview input[type="week"] {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  background: #fff;
+  color: #333;
+  box-sizing: border-box;
+}
+
+.html-preview input[type="text"]:focus,
+.html-preview input[type="email"]:focus,
+.html-preview input[type="password"]:focus,
+.html-preview input[type="tel"]:focus,
+.html-preview input[type="url"]:focus,
+.html-preview input[type="search"]:focus,
+.html-preview input[type="number"]:focus,
+.html-preview input[type="date"]:focus,
+.html-preview input[type="time"]:focus,
+.html-preview input[type="datetime-local"]:focus,
+.html-preview input[type="month"]:focus,
+.html-preview input[type="week"]:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+/* Number input specific styling */
+.html-preview input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.html-preview input[type="number"]::-webkit-outer-spin-button,
+.html-preview input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* File input */
+.html-preview input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border: 2px dashed #ddd;
+  border-radius: 6px;
+  background: #f8f9fa;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.html-preview input[type="file"]:hover {
+  border-color: #007bff;
+  background: #e3f2fd;
+}
+
+/* Checkbox and Radio buttons */
+.html-preview input[type="checkbox"],
+.html-preview input[type="radio"] {
+  margin-right: 8px;
+  transform: scale(1.2);
+  accent-color: #007bff;
+}
+
+/* Select dropdown */
+.html-preview select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  background: #fff;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.html-preview select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+/* Textarea */
+.html-preview textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 100px;
+  transition: all 0.3s ease;
+  background: #fff;
+  color: #333;
+}
+
+.html-preview textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+/* Buttons */
+.html-preview button,
+.html-preview input[type="submit"],
+.html-preview input[type="button"],
+.html-preview input[type="reset"] {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.html-preview button[type="submit"],
+.html-preview input[type="submit"] {
+  background: #007bff;
+  color: #fff;
+}
+
+.html-preview button[type="submit"]:hover,
+.html-preview input[type="submit"]:hover {
+  background: #0056b3;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+.html-preview button[type="button"],
+.html-preview input[type="button"] {
+  background: #6c757d;
+  color: #fff;
+  margin-right: 10px;
+}
+
+.html-preview button[type="button"]:hover,
+.html-preview input[type="button"]:hover {
+  background: #545b62;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(108, 117, 125, 0.3);
+}
+
+.html-preview button[type="reset"],
+.html-preview input[type="reset"] {
+  background: #dc3545;
+  color: #fff;
+}
+
+.html-preview button[type="reset"]:hover,
+.html-preview input[type="reset"]:hover {
+  background: #c82333;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+}
+
+/* Fieldset and Legend */
+.html-preview fieldset {
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  padding: 15px;
+  margin: 15px 0;
+  background: #f8f9fa;
+}
+
+.html-preview legend {
+  padding: 0 10px;
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+}
+
+/* Progress and Meter */
+.html-preview progress {
+  width: 100%;
+  height: 20px;
+  border-radius: 10px;
+  background: #e9ecef;
+}
+
+.html-preview progress::-webkit-progress-bar {
+  background: #e9ecef;
+  border-radius: 10px;
+}
+
+.html-preview progress::-webkit-progress-value {
+  background: #007bff;
+  border-radius: 10px;
+}
+
+.html-preview meter {
+  width: 100%;
+  height: 20px;
+}
+
+/* Output element */
+.html-preview output {
+  display: inline-block;
+  padding: 8px 12px;
+  background: #e9ecef;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Required field indicator */
+.html-preview input:required,
+.html-preview select:required,
+.html-preview textarea:required {
+  border-left: 4px solid #dc3545;
+}
+
+/* Disabled state */
+.html-preview input:disabled,
+.html-preview select:disabled,
+.html-preview textarea:disabled,
+.html-preview button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background: #f8f9fa;
+}
+
+/* Readonly state */
+.html-preview input:read-only,
+.html-preview textarea:read-only {
+  background: #f8f9fa;
+  color: #6c757d;
+}
+
+/* Placeholder styling */
+.html-preview input::placeholder,
+.html-preview textarea::placeholder {
+  color: #6c757d;
+  opacity: 0.7;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .editor-section {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .html-input {
+    height: 300px;
+  }
+  
+  .preview-container {
+    min-height: 300px;
+  }
+  
+  .custom-pages-container {
+    padding: 15px;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .custom-pages-container {
+    background: #1a1a1a;
+    color: #fff;
+  }
+  
+  .input-section,
+  .preview-section {
+    background: #2d2d2d;
+  }
+  
+  .preview-container {
+    background: #1a1a1a;
+    border-color: #444;
+  }
+  
+  .html-preview form {
+    background: #2d2d2d;
+  }
+  
+  .html-preview input,
+  .html-preview select,
+  .html-preview textarea {
+    background: #333;
+    color: #fff;
+    border-color: #555;
+  }
+  
+  .html-preview input:focus,
+  .html-preview select:focus,
+  .html-preview textarea:focus {
+    border-color: #007bff;
+  }
+} 
