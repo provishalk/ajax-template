@@ -11,3 +11,10 @@ window.MAILMODO_BASE_URL =
 window.MAILMODO_SCRIPT_SRC =
   import.meta.env.VITE_MAILMODO_SCRIPT_SRC ||
   "https://api-debug.mailmodo.com/form/script.js";
+
+// Debug logging to help troubleshoot
+console.log("Mailmodo Config:", {
+  siteId: window.MAILMODO_SITE_ID,
+  baseUrl: window.MAILMODO_BASE_URL,
+  scriptSrc: window.MAILMODO_SCRIPT_SRC,
+});

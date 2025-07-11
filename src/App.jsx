@@ -4,6 +4,7 @@ import Form1 from "./pages/Form1";
 import Form2 from "./pages/Form2";
 import Form3 from "./pages/Form3";
 import CustomPages from "./pages/CustomPages";
+import EnvDebug from "./components/EnvDebug";
 import "./App.css";
 
 function App() {
@@ -15,6 +16,8 @@ function App() {
         <Link to="/form2">🍛 Lunch</Link> | <Link to="/form3">🍲 Dinner</Link> |{" "}
         <Link to="/custom-pages">📄 Custom Pages</Link>
       </nav>
+
+      <EnvDebug />
 
       <Routes>
         <Route path="/" element={<Home />} />
