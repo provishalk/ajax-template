@@ -17,7 +17,7 @@ function App() {
         <Link to="/custom-pages">📄 Custom Pages</Link>
       </nav>
 
-      <EnvDebug />
+      {/* <EnvDebug /> */}
 
       <Routes>
         <Route path="/" element={<Home />} />
