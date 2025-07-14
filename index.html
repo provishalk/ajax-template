@@ -10,28 +10,19 @@
   <body>
     <div id="root"></div>
     <script type="text/javascript">
-      (function () {
-        var t = document.createElement("script"),
-          s = document.getElementsByTagName("script")[0];
-        t.async = true;
-        t.id = "custom-mm-forms-handler";
+  (function () {
+    var t = document.createElement('script'),
+      s = document.getElementsByTagName('script')[0];
+    t.async = true;
+    t.id = 'custom-mm-forms-handler';
+    t.setAttribute('data-site-id', "N86t5rqTa8");
+    t.setAttribute('data-base-url', "https://app-external-form-api-uat.azurewebsites.net");
 
-        // Read values from environment variables with fallbacks
-        var siteId = window.MAILMODO_SITE_ID || "3sBXu5uV2H";
-        var baseUrl =
-          window.MAILMODO_BASE_URL ||
-          "https://app-external-form-api-debug.azurewebsites.net";
-        var scriptSrc =
-          window.MAILMODO_SCRIPT_SRC ||
-          "https://api-debug.mailmodo.com/form/script.js";
+    t.src = 'https://api-uat.mailmodo.com/form/script.js';
 
-        t.setAttribute("data-site-id", siteId);
-        t.setAttribute("data-base-url", baseUrl);
-        t.src = scriptSrc;
-
-        s.parentNode.insertBefore(t, s);
-      })();
-    </script>
+    s.parentNode.insertBefore(t, s);
+  })();
+</script>
 
     <script type="module" src="/src/main.jsx"></script>
   </body>
